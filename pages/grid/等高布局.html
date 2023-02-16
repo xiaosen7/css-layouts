@@ -1,0 +1,112 @@
+<ul class="cards">
+  <li class="card">
+    <span class="card__message">✨Pick Me!</span
+    ><!-- 不是所有卡片都有该元素 -->
+
+    <h3 class="card__title"><a href="">Card Title</a></h3>
+    <p class="card__describe">Card Describe</p>
+    <button class="card__button">按钮</button>
+
+    <span class="card__episode">11</span
+    ><!-- 不是所有卡片都有该元素 -->
+  </li>
+
+  <li class="card">
+    <h3 class="card__title">
+      <a href=""
+        >Card TitleCard TitleCard TitleCard TitleCard TitleCard TitleCard
+        TitleCard Title</a
+      >
+    </h3>
+    <p class="card__describe">Card Describe</p>
+    <button class="card__button">按钮</button>
+
+    <span class="card__episode">11</span
+    ><!-- 不是所有卡片都有该元素 -->
+  </li>
+
+  <li class="card">
+    <span class="card__message">✨Pick Me!</span
+    ><!-- 不是所有卡片都有该元素 -->
+
+    <h3 class="card__title"><a href="">Card Title</a></h3>
+    <p class="card__describe">
+      Card DescribeCard DescribeCard DescribeCard DescribeCard DescribeCard
+      DescribeCard DescribeCard DescribeCard DescribeCard Describe
+    </p>
+    <button class="card__button">按钮</button>
+  </li>
+
+  <li class="card">
+    <span class="card__message">✨Pick Me!</span
+    ><!-- 不是所有卡片都有该元素 -->
+
+    <h3 class="card__title"><a href="">Card Title</a></h3>
+    <p class="card__describe">
+      Card DescribeCard DescribeCard DescribeCard DescribeCard DescribeCard
+      DescribeCard DescribeCard DescribeCard DescribeCard Describe
+    </p>
+    <button class="card__button">按钮</button>
+  </li>
+</ul>
+
+<style>
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      /* 这样写就会有最小宽度了 */
+        /* 1ch = 1个英文 = 1个数字 的宽度  2ch = 1个中文 的宽度 */
+        minmax(25ch, 1fr)
+    );
+    gap: 1.5rem 2rem;
+  }
+
+  .card {
+    background-color: brown;
+
+    display: inherit;
+    grid-template-rows: subgrid;
+    /* 看看grid-template-areas选项就明白了，7刚好对应7个区域 */
+    grid-row-start: span 7;
+    row-gap: 0.5rem;
+    /* 卡片内部划分出3个列，模拟padding的效果 */
+    grid-template-columns: 1.5rem 1fr 1.5rem;
+    /* 卡片内部划分出7个行区域 */
+    grid-template-areas:
+      ". message   ."
+      ". title     ."
+      ". describe  ."
+      ". button    ."
+      ". episode   ."
+      ". .         ."
+      ". .         .";
+  }
+
+  .card__episode {
+    grid-area: episode;
+    justify-self: end;
+  }
+
+  .card__message {
+    grid-area: message;
+  }
+
+  .card__title {
+    grid-area: title;
+  }
+
+  .card__describe {
+    grid-area: describe;
+  }
+
+  .card__button {
+    grid-area: button;
+    place-self: center;
+  }
+
+  .card::before,
+  .card::after {
+    grid-area: 1 / 1 / -1 / -1;
+  }
+</style>

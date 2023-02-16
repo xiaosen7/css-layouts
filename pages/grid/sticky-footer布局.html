@@ -1,0 +1,21 @@
+<body>
+  <header>header</header>
+  <main>content</main>
+  <footer>footer</footer>
+</body>
+<style>
+  body {
+    display: grid;
+    /* grid-template-rows: auto minmax(0, 1fr) auto; */
+    grid-template-rows: min-content auto min-content;
+  }
+
+  header,
+  footer {
+    background-color: antiquewhite;
+  }
+
+  main {
+    background-color: aquamarine;
+  }
+</style>

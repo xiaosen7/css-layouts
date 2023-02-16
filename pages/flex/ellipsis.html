@@ -1,0 +1,62 @@
+<div class="target">
+  <div class="target__title">
+    <strong>Flexbox Layout:</strong> Text here is very very long that it might
+    get truncate if this box get resized too small
+  </div>
+  <div class="target__emoji">🎃</div>
+</div>
+
+<style>
+  .target {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .target__title {
+    overflow: hidden;
+    min-width: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .target__emoji {
+    width: max-content;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+</style>
+
+<ul class="badges">
+  <li><span>Fast food</span></li>
+  <li><span>Fruits</span></li>
+  <li><span>Fruits</span></li>
+  <li><span>Fruits</span></li>
+  <li><span>Fruits</span></li>
+  <li><span>Fruits</span></li>
+  <li><span>Fruits</span></li>
+  <li><span>Fruits</span></li>
+</ul>
+
+<style>
+  .badges {
+    background-color: aquamarine;
+    gap: 1rem;
+
+    display: block;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .badges li {
+    list-style: none;
+    background-color: orange;
+    padding: 20px;
+    color: white;
+    border-radius: 1rem;
+
+    display: inline-block;
+  }
+</style>

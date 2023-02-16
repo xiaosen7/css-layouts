@@ -1,0 +1,163 @@
+<div class="main-container">
+  <!-- flex-direction: column -->
+  <div class="fixed-container">Fixed Container</div>
+  <!-- eg. height: 100px -->
+  <div class="content-wrapper">
+    <!-- min-height: 0, 这个很重要 -->
+    <div class="overflow-container">
+      <!-- 滚动容器，overflow-y: auto & flex: 1 -->
+      <div class="overflow-content">
+        Overflow ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow Content Overflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow Content Overflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow Content Overflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow Content Overflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow Content Overflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow Content Overflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow Content Overflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow ContentOverflow
+        ContentOverflow ContentOverflow ContentOverflow Content
+      </div>
+      <!-- 内容容器 -->
+    </div>
+  </div>
+</div>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .fixed-container {
+    background-color: aquamarine;
+    min-height: 100px; /* 固定容器的高度值，任何一个你想的固定值 */
+    max-height: 100px;
+  }
+
+  .content-wrapper {
+    background-color: black;
+
+    display: flex;
+    flex-grow: 1;
+    min-height: 0; /* 这个很重要 */
+  }
+
+  .overflow-container {
+    background-color: violet;
+    flex-grow: 1;
+    overflow-y: auto; /* 内容超出滚动容器高度时，会出现滚动条 */
+  }
+
+  .overflow-content {
+    background-color: brown;
+  }
+</style>

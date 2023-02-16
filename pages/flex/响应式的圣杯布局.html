@@ -1,0 +1,82 @@
+<!-- 响应式的圣杯布局 -->
+<header>header</header>
+<main>
+  <article>
+    <h2>现代 Web 布局技术</h2>
+    <p>使用 CSS Flexbox 技术构建圣杯布局（Holy Grail Layout）</p>
+  </article>
+  <aside>
+    <h3>左侧列</h3>
+  </aside>
+  <aside>
+    <h3>右侧列</h3>
+  </aside>
+</main>
+<footer>footer</footer>
+
+<style>
+  @media screen and (max-width: 800px) {
+    main {
+      flex-direction: column;
+    }
+
+    main aside {
+      align-self: stretch;
+    }
+
+    main aside:nth-of-type(1) {
+      order: 1;
+    }
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    min-height: 100vh;
+  }
+
+  main {
+    background-color: aquamarine;
+
+    flex-grow: 1;
+    display: flex;
+    gap: 1px;
+  }
+
+  aside:nth-of-type(1) {
+    background-color: bisque;
+
+    min-width: 220px;
+
+    /* width: 220px;
+    flex-shrink: 0; */
+
+    order: -1;
+  }
+
+  aside:nth-of-type(2) {
+    background-color: azure;
+
+    min-width: 320px;
+
+    /* width: 320px;
+    flex-shrink: 0; */
+  }
+
+  article {
+    background-color: wheat;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  header {
+    height: 50px;
+    background-color: cadetblue;
+  }
+
+  footer {
+    height: 50px;
+    background-color: cadetblue;
+  }
+</style>

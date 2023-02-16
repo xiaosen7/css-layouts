@@ -1,0 +1,38 @@
+<div class="container container--single">
+  <div class="item">单个元素水平垂直居中</div>
+</div>
+
+<hr />
+
+<div class="container container--multiple">
+  <h2>Title</h2>
+  <p>Describe</p>
+</div>
+
+<style>
+  .container {
+    background-color: aquamarine;
+    height: 100px;
+
+    display: grid; /* 或 inline-grid */
+
+    place-content: center;
+    place-items: center;
+
+    /* place-content: center; */
+
+    /* 等同于 */
+    /* 网格轨道沿着块轴方向垂直居中  */
+    /* align-content: center; */
+    /* 网格轨道沿着内联轴方向水平居中 */
+    /* justify-content: center; */
+
+    /* place-items: center; */
+
+    /* 等同于 */
+    /* 网格容器所有网格项目沿着块轴方向垂直居中 */
+    /* align-items: center;  */
+    /* 网格容器所有网格项目沿着内联轴方向水平垂直居中 */
+    /* justify-items: center; */
+  }
+</style>

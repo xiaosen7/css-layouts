@@ -1,0 +1,111 @@
+<body translate="no">
+  <header>
+    <h4>header</h4>
+  </header>
+  <nav>
+    <h4>nav</h4>
+  </nav>
+  <main>
+    <h4>main</h4>
+  </main>
+  <aside>
+    <h4>sidebar</h4>
+  </aside>
+  <section>
+    <h4>ads</h4>
+  </section>
+  <div class="card card--1">
+    <h4>card</h4>
+  </div>
+
+  <div class="card card--2">
+    <h4>card</h4>
+  </div>
+
+  <footer>
+    <h4>footer</h4>
+  </footer>
+</body>
+<style>
+  body {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem 2rem;
+    grid-auto-flow: dense;
+
+    grid-template-areas:
+      "header  header  header  header  header  header  header  header  header  header  header  header "
+      "nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav "
+      "main    main    main    main    main    main    main    main    main    main    main    main "
+      "card1   card1   card1   card1   card1   card1   card1   card1   card1   card1   card1   card1"
+      "card2   card2   card2   card2   card2   card2   card2   card2   card2   card2   card2   card2"
+      "aside   aside   aside   aside   aside   aside   aside   aside   aside   aside   aside   aside"
+      "ads     ads     ads     ads     ads     ads     ads     ads     ads     ads     ads     ads"
+      "footer  footer  footer  footer  footer  footer  footer  footer  footer  footer  footer  footer";
+    grid-template-rows: auto auto minmax(0, 1fr) auto auto auto auto auto;
+    padding: 0 1rem;
+  }
+
+  header {
+    background-color: aquamarine;
+    grid-area: header;
+  }
+
+  nav {
+    background-color: aquamarine;
+    grid-area: nav;
+  }
+
+  main {
+    background-color: aquamarine;
+    grid-area: main;
+  }
+
+  aside {
+    background-color: aquamarine;
+    grid-area: aside;
+  }
+
+  section {
+    background-color: aquamarine;
+    grid-area: ads;
+  }
+
+  footer {
+    background-color: aquamarine;
+    grid-area: footer;
+  }
+
+  .card--1 {
+    background-color: aquamarine;
+    grid-area: card1;
+  }
+
+  .card--2 {
+    background-color: aquamarine;
+    grid-area: card2;
+  }
+
+  @media only screen and (min-width: 768px) {
+    body {
+      grid-template-areas:
+        "header    header    header  header  header  header  header  header  header  header  header  header "
+        "aside     aside     nav     nav     nav     nav     nav     nav     nav     nav     nav     nav "
+        "aside     aside     main    main    main    main    main    main    main    main    main    main "
+        "ads       ads       card1   card1   card1   card1   card1   card2   card2   card2   card2   card2"
+        "footer    footer    footer  footer  footer  footer  footer  footer  footer  footer  footer  footer";
+      grid-template-rows: auto auto minmax(0, 1fr) auto auto;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    body {
+      grid-template-areas:
+        "header    header    header  header  header  header  header  header  header  header  header   header "
+        "nav       nav       main    main    main    main    main    main    main    main    aside    aside "
+        "nav       nav       card1   card1   card1   card1   card2   card2   card2   card2   ads      ads"
+        "footer    footer    footer  footer  footer  footer  footer  footer  footer  footer  footer   footer";
+      grid-template-rows: auto minmax(0, 1fr) auto auto;
+    }
+  }
+</style>

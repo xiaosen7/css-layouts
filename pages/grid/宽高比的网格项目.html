@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="item">16:9</div>
+  <div class="item">16:9</div>
+  <div class="item">16:9</div>
+  <div class="item">16:9</div>
+  <div class="item">16:9</div>
+  <div class="item">16:9</div>
+  <div class="item">16:9</div>
+  <div class="item">16:9</div>
+</div>
+
+<style>
+  :root {
+    --gridContainerWidth: 80vw; /* 网格容器尺寸 */
+    --columns: 4; /* 网格列轨道数量 */
+    --gap: 1rem; /* 网格列轨道之间间距 */
+
+    /* 假设宽高比是 16:9 */
+    --ratioW: 16;
+    --ratioH: 9;
+
+    /* 计算出宽高比 */
+    --ratio: calc(var(--ratioW) / var(--ratioH));
+
+    /* 使用宽高比来计算乘法因子，计算行网格轨道需要使用 */
+    --factor: calc(
+      1 / var(--ratio)
+    ); /* 等同于 calc(var(--ratioH) / var(--ratioW)) */
+    --rowSize: calc(
+      (
+          (var(--gridContainerWidth) - ((var(--columns) - 1) * var(--gap))) /
+            var(--columns)
+        ) * var(--factor)
+    );
+  }
+
+  /* 定义一个网格 */
+  .container {
+    /* inline-size: var(--gridContainerWidth); */
+    width: var(--gridContainerWidth);
+
+    display: grid;
+    grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+    gap: var(--gap);
+
+    grid-auto-rows: minmax(var(--rowSize), auto);
+    grid-auto-flow: dense;
+  }
+
+  .item {
+    background-color: aquamarine;
+  }
+
+  @media only screen and (max-width: 60em) {
+    :root {
+      --gridContainerWidth: 60em;
+      --gap: 20px;
+      --columns: 4;
+      --ratioW: 1;
+      --ratioH: 1;
+    }
+  }
+</style>
